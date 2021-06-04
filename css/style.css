@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --primary-color: #ffffff;
+  --color-title: #333333;
+  --color-subtitle: #4f4f4f;
+  --color-button: #333333;
+  --header-font: "Inconsolata", monospace;
+  --title-font: "Space Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--primary-color);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 77px;
+  margin-top: 40px;
+}
+.header p {
+  font-family: var(--header-font);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-title);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.mobile {
+  display: none;
+}
+
+.card {
+  display: flex;
+  max-width: 1008px;
+  margin: 10%;
+}
+
+img {
+  width: 100%;
+}
+.card-img {
+  width: 50%;
+  margin-right: 10%;
+}
+.card-text {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.card-text h1 {
+  font-family: var(--title-font);
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--color-title);
+}
+.card-text p {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 2rem;
+
+  color: var(--color-subtitle);
+  padding-right: 30%;
+}
+.card-text a {
+  display: flex;
+  width: 216px;
+  height: 68px;
+  background-color: var(--color-button);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 50px;
+}
+a .back--to-home {
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-align: center;
+  padding: 0;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 690px) {
+  .card {
+    flex-direction: column;
+    max-width: 80%;
+  }
+  .card-text {
+    padding: 5%;
+    width: 100%;
+    align-content: flex-start;
+  }
+  .card-img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  h1,
+  p {
+  }
+  .card-text p {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
